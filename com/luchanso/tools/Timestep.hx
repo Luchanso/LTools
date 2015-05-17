@@ -7,14 +7,19 @@ import openfl.Lib;
  */
 class Timestep
 {
-	private var _gameSpeed			:Float = 1;
-	private var _targetFrametime	:Float = 0.6;
-	private var _maxSpeed			:Float = 3;
-	private var _smoothing			:Float = .5;
+	public var gameSpeed(get, set):Float;
+	public var maxSpeed	(get, set):Float;
+	public var smoothing(get, set):Float;
+	public var timeDelta(get, null):Float;
+
+	var _gameSpeed			:Float = 1;
+	var _targetFrametime	:Float = 0.6;
+	var _maxSpeed			:Float = 3;
+	var _smoothing			:Float = .5;
 	
-	private var _realSpeed			:Float = 0.0;
-	private var _lastFrameTime		:Float = 0.0;
-	private var _delta				:Float = 0.0;
+	var _realSpeed			:Float = 0.0;
+	var _lastFrameTime		:Float = 0.0;
+	var _delta				:Float = 0.0;
 
 	/**
 	 * Intialization timestep
@@ -47,16 +52,16 @@ class Timestep
 			return _delta * _gameSpeed;
 		}
 
-		public function get timeDelta():Float { return _delta * _gameSpeed; }
+		public function get_timeDelta():Float { return _delta * _gameSpeed; }
 		
-		public function get maxSpeed():Float {	return _maxSpeed; }
-		public function set maxSpeed(value:Float):Float { return _maxSpeed = value; }
+		public function get_maxSpeed():Float {	return _maxSpeed; }
+		public function set_maxSpeed(value:Float):Float { return _maxSpeed = value; }
 		
-		public function get gameSpeed():Float { return _gameSpeed; }
-		public function set gameSpeed(value:Float):Float { return _gameSpeed = value;	}
+		public function get_gameSpeed():Float { return _gameSpeed; }
+		public function set_gameSpeed(value:Float):Float { return _gameSpeed = value;	}
 		
-		public function get smoothing():Float { return _smoothing; }
-		public function set smoothing(value:Float):Float {
+		public function get_smoothing():Float { return _smoothing; }
+		public function set_smoothing(value:Float):Float {
 			if (value > 1) value = 1;
 			if (value < 0) value = 0;
 			return _smoothing = value;
