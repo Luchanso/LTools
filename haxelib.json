@@ -1,0 +1,10 @@
+{
+  "name": "actuate",
+  "url": "http://github.com/luchanso/ltools",
+  "license": "MIT",
+  "tags": [ "instruments", "luchanso" ],
+  "description": "Luchanso game tools library",
+  "version": "1.0.0",
+  "contributors": [ "luchanso" ],
+  "dependencies": {}
+}
