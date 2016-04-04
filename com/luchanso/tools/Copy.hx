@@ -24,32 +24,6 @@ class Copy
 			}
 			return result;
 		}
-		else if(Std.is( v, Hash ))
-		{ // hashmap
-			var result = Type.createInstance(Type.getClass(v), []);
-			untyped
-			{
-				var keys : Iterator<String> = v.keys();
-				for( key in keys ) 
-				{
-					result.set(key, copy(v.get(key)));
-				}
-			} 
-			return result;
-		}
-		else if(Std.is( v, IntHash ))
-		{ // integer-indexed hashmap
-			var result = Type.createInstance(Type.getClass(v), []);
-			untyped 
-			{
-				var keys : Iterator<Int> = v.keys();
-				for( key in keys ) 
-				{
-					result.set(key, copy(v.get(key)));
-				}
-			} 
-			return result;
-		}
 		else if(Std.is( v, List )) 
 		{ // list		
 			var result = Type.createInstance(Type.getClass(v), []);
