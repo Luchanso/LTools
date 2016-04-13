@@ -4,7 +4,7 @@
   "license": "MIT",
   "tags": [ "instruments", "luchanso" ],
   "description": "Luchanso game tools library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "contributors": [ "luchanso" ],
   "dependencies": {}
 }
