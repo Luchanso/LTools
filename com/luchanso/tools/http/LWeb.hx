@@ -16,12 +16,12 @@ class LWeb
                 isFirst = false;
             }
             else {
-                str += '&';
+                dataStr += '&';
             }
 			
-			str += i + "=" + StringTools.urlEncode(Reflect.field(obj, i));
+			dataStr += i + "=" + StringTools.urlEncode(Reflect.field(obj, i));
         }
         
-        return str;
+        return dataStr;
 	}
 }
